@@ -418,7 +418,18 @@
 
   <img src="https://static.tildacdn.com/tild6433-3135-4636-b232-613237353237/Group_6.png" class="ornament" alt="Kazakh Ornament">
 
-  <h2>Құрметті қонақтар!</h2>
+  <h2 id="guest-name">Құрметті қонақтар!</h2>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('guest');
+  
+    if (guestName) {
+      const decodedName = decodeURIComponent(guestName);
+      document.getElementById("guest-name").innerText = `Құрметті ${decodedName}!`;
+    }
+  </script>
+
 
   <p class="invitation-text">
     Сіздерді балаларымыз <br>
