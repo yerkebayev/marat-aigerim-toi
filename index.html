@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Үйлену тойына шақыру</title>
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
   
   <style>
     /* Fonts */
@@ -80,7 +82,7 @@
     }
     
     .invitation-text {
-      font-size: 18px;
+      font-size: 36px;
       margin-top: 15px;
       line-height: 1.5;
       color: black;
@@ -134,28 +136,18 @@
     
     /* Countdown */
     .countdown-section {
-      background: url('5.jpg') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
-      width: 100%;
-      padding-top: 20px;
-    }
-    
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      top: 0;
-      left: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  background: none;
+  height: auto;
+}
     
     .countdown-content {
       position: relative;
@@ -349,10 +341,6 @@ button:hover {
         font-size: 24px;
       }
     
-      .invitation-text {
-        font-size: 16px;
-      }
-    
       .photo-row img,
   .image-row img {
     width: 90%; /* uses most of the screen width */
@@ -436,7 +424,7 @@ button:hover {
 
   <img src="https://static.tildacdn.com/tild6433-3135-4636-b232-613237353237/Group_6.png" class="ornament" alt="Kazakh Ornament">
 
-  <h2 id="guest-name">Құрметті қонақтар!</h2>
+  <h1 id="invitation-text" style="font-family: 'Caveat'">Құрметті қонақтар!</h2>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -449,15 +437,15 @@ button:hover {
   </script>
 
 
-  <p class="invitation-text">
-    Сіздерді балаларымыз <br>
-    <span class="names">Марат</span> <br>
+  <p class="invitation-text" style="font-family: 'Caveat'" >
+    Сіздерді<br>
+    <span class="names" style="font-size: 50px; font-family: 'Great Vibes', cursive;">Марат</span> <br>
     пен <br>
-    <span class="names">Айгерімнің</span>
+    <span class="names" style="font-size: 50px; font-family: 'Great Vibes', cursive;">Айгерім</span>
   </p>
 
-  <p class="invitation-text">
-    үйлену тойына арналған салтанатты ақ дастарханымыздың<br>
+  <p class="invitation-text" style="font-family: 'Caveat'" >
+    балаларымыздың үйлену тойына арналған салтанатты ақ дастарханымыздың<br>
     қадірлі қонағы болуға шақырамыз!
   </p>
   <img src="https://static.tildacdn.com/tild6433-3135-4636-b232-613237353237/Group_6.png" class="ornament" alt="Kazakh Ornament" style="transform: rotate(180deg);">
@@ -497,29 +485,31 @@ button:hover {
   </table>
 
 
-  <p class="time">Уақыты<br>18:00</p>
+  <p class="time" >Уақыты<br>18:00</p>
 
   <!-- 4. ТАЙМЕР ДО ДАТЫ -->
-  <div class="countdown-section">
-    <div class="overlay"></div>
-    <div class="countdown-content">
-      <h1>Тойға дейін:</h1>
-      <div class="countdown">
-        <div class="unit">
-          <span id="days">0</span>
-          КҮН
-        </div>
-        <div class="unit">
-          <span id="hours">0</span>
-          САҒАТ
-        </div>
-        <div class="unit">
-          <span id="minutes">0</span>
-          МИНУТ
-        </div>
+<div class="container">
+  <img src="8.jpg" alt="Countdown Image" class="main-image" style="margin-bottom: 20px;">
+
+  <div class="countdown-content" style="padding: 20px;">
+    <h1 style="color: #5a0c0c; font-size: 28px; margin-bottom: 20px;">Тойға дейін:</h1>
+    <div class="countdown" style="color: #5a0c0c;">
+      <div class="unit">
+        <span id="days">0</span>
+        КҮН
+      </div>
+      <div class="unit">
+        <span id="hours">0</span>
+        САҒАТ
+      </div>
+      <div class="unit">
+        <span id="minutes">0</span>
+        МИНУТ
       </div>
     </div>
   </div>
+</div>
+
 
 </div>
 
@@ -554,14 +544,17 @@ button:hover {
 <!-- 5. МЕСТО СВАДЬБЫ (КАРТА) -->
 <div class="container">
   <h1>Мекен-жайымыз:</h1>
-  <p class="invitation-text">
-    Ақтөбе қаласы<br>
-    <span class="names">"Жерұйық"</span> мейрамханасы
+  <a href="https://go.2gis.com/aPixJ" target="_blank" style="margin-top: 10px;">
+    <img src="https://play-lh.googleusercontent.com/55huczUZ05ruaVynURUNqzgTu0qXLF-SPQZKtE9KA6_BavI-g0NgXz1NR98n5xX33HwD" alt="2GIS карта" width="70" height="70" style="border-radius: 8px;">
+  </a>
+  <p class="invitation-text" style="font-size: 30px;">
+    Ақтөбе қаласы, Тургенова 80В<br>
+    <span class="names">"Жерұйық"</span><br>мейрамханасы
   </p>
 
   <img src="https://static.tildacdn.com/tild6433-3135-4636-b232-613237353237/Group_6.png" class="ornament" alt="Kazakh Ornament">
 
-  <h1>Той иелері:</h1>
+  <h1 style="font-family: 'Marck Script', cursive;">Той иелері:</h1>
   <p class="names" style="font-family: 'Marck Script', cursive;">Абай - Алия</p>
 
   <img src="https://static.tildacdn.com/tild6433-3135-4636-b232-613237353237/Group_6.png" class="ornament" alt="Kazakh Ornament" style="transform: rotate(180deg);">
@@ -592,7 +585,7 @@ button:hover {
       <img src="IMG_7453.JPG" alt="photo3">
     </div>
 
-    <h1>Келіңіздер,<br>
+    <h1 style="font-family: 'Caveat'">Келіңіздер,<br>
         тойымыздың<br>
         қадірлі қонағы<br>
         болыңыздар!</h1>
